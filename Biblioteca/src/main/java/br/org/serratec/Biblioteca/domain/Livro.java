@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table
@@ -17,6 +18,7 @@ public class Livro {
     private Long id;
 
     @Column
+    @NotBlank(message = "O título é obrigatorio.")
     private String titulo;
 
     @Column
@@ -57,4 +59,3 @@ public class Livro {
         this.publicacao = publicacao;
     }
 }
- 
