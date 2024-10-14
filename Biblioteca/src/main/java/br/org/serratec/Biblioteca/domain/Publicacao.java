@@ -1,6 +1,6 @@
 package br.org.serratec.Biblioteca.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotBlank;
@@ -10,7 +10,7 @@ public class Publicacao {
     @NotBlank(message = "O autor é obrigatorio.")
     private String autor;
 
-    private Date dataPublicacao;
+    private LocalDate dataPublicacao;
     private String editora;
 
     public String getAutor() {
@@ -21,11 +21,11 @@ public class Publicacao {
         this.autor = autor;
     }
 
-    public Date getDataPublicacao() {
+    public LocalDate getDataPublicacao() {
         return dataPublicacao;
     }
 
-    public void setDataPublicacao(Date dataPublicacao) {
+    public void setDataPublicacao(LocalDate dataPublicacao) {
         this.dataPublicacao = dataPublicacao;
     }
 
